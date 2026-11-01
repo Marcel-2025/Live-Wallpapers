@@ -50,3 +50,10 @@ Die fünf Screenshot-Mockups wurden verlustarm auf ihren tatsächlichen Bildinha
 2. **Kaufprüfung:** ausschließlich clientseitige Verifizierung mit öffentlichem Google-Play-Schlüssel schützt einen lokalen Credit-Ledger nicht zuverlässig gegen manipulierte Clients. Für verlässliche Entitlements serverseitige Google Play Developer API mit Backend bzw. geeignete Backend-Verifizierung evaluieren. Keine Veröffentlichung mit unzureichendem Betrugsschutz als 'sicher' anpreisen.
 3. App-Datenschutz und Impressum durch echte Manifest-, SDK-, Google-Play- und Hosting-Prüfung finalisieren. Vollständige ladungsfähige Anschrift fehlt.
 4. Echte Play-Store-Links und aktuelle, tatsächlich aus dem Build aufgenommene Screenshots nach Freigabe hinterlegen.
+
+## V3.1 – ArtIsFantasy Markenauftritt (01.11.2026)
+- Neue zweisprachige **ArtIsFantasy**-Sektion mit KI-Kunst, Fantasy-Welten, Shorts, KI-Animationen und Ambiente-Videos.
+- Verifizierte, vom Betreiber mitgeteilte Kanäle: DeviantArt Galerie, Instagram @artisfantasy.da, TikTok @artisfantasy.da, Facebook ehhm.s.art.
+- Erwähnung exklusiver Kunst und DeviantArt-VIP-Mitgliedschaften ohne Preis-/Leistungsversprechen.
+- Keine eingebetteten Drittanbieter-Widgets oder Tracking-Skripte; externe Netzwerke öffnen erst nach Klick.
+- Das Schloss bleibt App-Haupticon, Saisonicons bleiben unverändert. Der korrigierte Screenshot-Carousel bleibt unverändert.

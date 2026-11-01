@@ -38,3 +38,30 @@ html{overflow-x:clip}
 .delivery-icon{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:13px;background:rgba(99,190,255,.12);color:#9fe4ff;font-size:26px}.delivery-note p{font-size:.78rem;line-height:1.7;color:#aeb5d2;margin:0}.delivery-note strong{color:#e3e8ff}
 @media(max-width:1000px){.stats-section{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-card{min-height:240px}}
 @media(max-width:550px){.stats-section{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat-card{min-height:104px;padding:15px 7px}.stat-card strong{font-size:2rem}.stat-card span{font-size:.63rem}.stats-section .stat-card:last-child{grid-column:span 2;min-height:90px}.collection-update{padding-top:60px}.catalog-grid{gap:10px}.catalog-card{min-height:230px;padding:16px 13px;border-radius:15px}.catalog-icon{width:39px;height:39px;font-size:22px}.catalog-card h3{font-size:.84rem;margin:14px 0 6px}.catalog-card p{font-size:.69rem;line-height:1.55;margin-bottom:12px}.catalog-pill{font-size:.54rem;padding:4px 8px}.delivery-note{padding:13px 12px;gap:12px}.delivery-note p{font-size:.71rem}.delivery-icon{width:37px;height:37px;font-size:20px}}
+
+/* V3.1 - ArtIsFantasy creator and social section. No third-party embeds/trackers. */
+.about-artisfantasy{padding-top:65px;padding-bottom:95px}
+.artisfantasy-panel{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(320px,.93fr);gap:40px;align-items:start;padding:55px;border:1px solid rgba(223,179,253,.17);border-radius:28px;background:radial-gradient(ellipse at 100% 0%,rgba(115,58,202,.16),transparent 52%),linear-gradient(155deg,rgba(25,19,50,.84),rgba(8,12,32,.95));box-shadow:0 24px 70px rgba(0,0,0,.18)}
+.artisfantasy-story h2{font-size:clamp(2.4rem,4vw,4.2rem);margin:19px 0 23px}
+.artisfantasy-story p{font-size:.91rem;line-height:1.9;color:#b9b1ca;max-width:560px;margin:0 0 15px}
+.artisfantasy-story .artisfantasy-intro{color:#eee4fc;font-size:1rem}
+.artisfantasy-topics{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 24px}
+.artisfantasy-topics span{font-size:.69rem;line-height:1.45;padding:9px 12px;border-radius:100px;border:1px solid rgba(214,171,254,.2);background:rgba(163,106,223,.07);color:#d9caee}
+.artisfantasy-story .brand-motto{font-family:Georgia,serif;font-style:italic;font-size:1.12rem;color:#f3d5ff;margin-top:24px}
+.brand-motto span{color:var(--gold)}
+.artisfantasy-community{padding:24px;border-radius:21px;border:1px solid rgba(201,167,243,.15);background:rgba(9,9,27,.56)}
+.artisfantasy-community-head{display:flex;align-items:center;gap:11px;font-size:1.02rem;line-height:1.35;color:#f7eaff}
+.artisfantasy-community-head>span{font-size:23px;color:var(--gold)}
+.artisfantasy-community>p{color:#a9a6c0;font-size:.8rem;line-height:1.75;margin:9px 0 19px}
+.social-destinations{display:grid;gap:9px}
+.social-destination{display:flex;align-items:center;gap:13px;padding:13px 15px;background:linear-gradient(115deg,rgba(48,37,79,.53),rgba(19,20,49,.53));border:1px solid rgba(207,176,251,.14);border-radius:14px;transition:transform .2s,border-color .2s,background .2s}
+.social-destination:hover{transform:translateY(-2px);border-color:rgba(233,197,255,.48);background:rgba(85,56,127,.29)}
+.social-mark{display:grid;place-items:center;width:39px;height:39px;flex:none;border-radius:11px;font-size:.8rem;font-weight:850;color:#fff;background:#3b315c}
+.social-mark.da{background:linear-gradient(135deg,#24705a,#14392f)}.social-mark.ig{background:linear-gradient(135deg,#9d36c0,#eb4f86)}.social-mark.tt{background:linear-gradient(135deg,#264263,#9d386c);font-size:1.4rem}.social-mark.fb{background:linear-gradient(135deg,#3579cf,#153766);font-family:Arial,sans-serif;font-size:1.5rem}
+.social-destination span:nth-child(2){display:flex;flex-direction:column;min-width:0;line-height:1.45}
+.social-destination strong{color:#fff;font-size:.85rem}.social-destination small{font-size:.69rem;color:#aaa4c3}
+.social-arrow{margin-left:auto;color:#bba4ef;flex:none;font-size:1.16rem}
+.membership-note{display:flex;align-items:start;gap:10px;margin-top:17px;padding:13px;background:rgba(192,145,69,.08);border:1px solid rgba(239,201,133,.14);border-radius:12px}
+.membership-note>span{color:#ffe0a0;font-size:1.1rem}.membership-note p{margin:0;color:#dac9ad;font-size:.72rem;line-height:1.7}
+@media(max-width:1000px){.artisfantasy-panel{grid-template-columns:1fr;gap:24px;padding:38px}.artisfantasy-community{max-width:650px}}
+@media(max-width:550px){.about-artisfantasy{padding:55px 0}.artisfantasy-panel{padding:25px 17px;gap:19px;border-radius:21px}.artisfantasy-story h2{font-size:2.55rem}.artisfantasy-story p{font-size:.82rem}.artisfantasy-story .artisfantasy-intro{font-size:.89rem}.artisfantasy-topics{margin:20px 0;gap:6px}.artisfantasy-topics span{font-size:.6rem;padding:7px 9px}.artisfantasy-community{padding:16px}.artisfantasy-community-head{font-size:.92rem}.social-destination{padding:11px 12px}}
