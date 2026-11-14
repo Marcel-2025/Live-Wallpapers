@@ -324,3 +324,20 @@ body[data-active-season="autumn"] .scene-hero .season-particle,body[data-active-
 .scene-hero .experience-links{margin-top:20px}
 .scene-hero .experience-heading p,.scene-desc,.scene-feature small{text-shadow:0 1px 3px rgba(0,0,0,.85),0 2px 14px rgba(0,0,0,.6)}
 .scene-feature strong{text-shadow:0 1px 3px rgba(0,0,0,.8)}
+/* V5.5 – Linktree oben in der Navigation, Screenshots am PC alle nebeneinander */
+.nav-linktree{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;border:1px solid rgba(var(--season-rgb,181,134,255),.45);background:rgba(255,255,255,.04);font-size:.79rem;font-weight:750;white-space:nowrap;color:#f4ecff;transition:background .2s,border-color .2s}
+.nav-linktree:hover{background:rgba(var(--season-rgb,181,134,255),.18)}
+.nav-linktree>span:first-child{color:var(--season-a,#ffda94)}
+@media(max-width:550px){.nav-linktree{padding:7px 11px;font-size:.72rem}}
+@media(min-width:900px){
+ .screenshots-scroll{overflow:visible!important;justify-content:center!important;scroll-snap-type:none!important;gap:16px!important;padding:8px 0 10px!important}
+ .screen-item{flex:1 1 0!important;min-width:0!important;max-width:200px!important}
+ .gallery-controls{display:none!important}
+}
+.social-icon{width:44px;height:44px;flex:0 0 44px;border-radius:50%;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.nav-linktree img{width:20px;height:20px;border-radius:50%}
+/* V5.5 – Lesbarkeit auf hellen Szenen (ComfyUI-Szenen ohne Weichzeichner) */
+.scene-hero:after{background:radial-gradient(ellipse 44% 60% at 50% 46%,rgba(8,7,22,.62),rgba(8,7,22,.25) 62%,transparent 80%),linear-gradient(180deg,rgba(8,9,20,.3),transparent 14%,transparent 86%,#080914 100%)!important}
+.scene-hero .experience-heading h1 em,.scene-title{filter:drop-shadow(0 2px 6px rgba(0,0,0,.75)) drop-shadow(0 0 18px rgba(0,0,0,.45))}
+.scene-hero .experience-heading p,.scene-desc{text-shadow:0 1px 2px #000,0 2px 12px rgba(0,0,0,.85)!important}
+.scene-features{background:rgba(10,8,26,.48);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:12px 6px;backdrop-filter:blur(6px)}

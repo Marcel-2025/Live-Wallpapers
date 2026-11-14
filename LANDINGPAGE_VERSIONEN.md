@@ -28,7 +28,8 @@ Jede Version liegt jetzt als eigener Commit mit Tag im Verlauf. Autor-Datum = Da
 | `landingpage-v5.1` | V5.1 (14.11.) | – | V5 + Google Play und ArtIsFantasy Linktree (Navigation, Startsektion, ArtIsFantasy-Bereich, Abschluss, Fußzeile), Fußzeilen-Links der bisherigen Live-Seite, FAQ auf „App ist live“ aktualisiert |
 | `landingpage-v5.2` | V5.2 (14.11.) | – | Saison-Szenen-Hero nach Halloween-Konzept: Deko rundherum je Design (Kürbisse, Mond, Wasserfälle, Schnee, Blüten, Weihnachtsbäume …), Schloss-Karussell, Saison-Titel mit drei Merkmalen, fallende Blätter/Schnee/Blüten und Fledermäuse |
 | `landingpage-v5.3` | V5.3 (14.11.) | – | Szenen nach Marcels sechs Konzeptbildern (Halloween, Herbst, Winter, Frühling, Sommer, Weihnachten) – Deko der Konzepte rundherum, Oberfläche echt; Saisontexte aus den Konzepten; kompakter Hero |
-| `landingpage-v5.4` | V5.4 (14.11.) | – | **Live-Version:** neues Weihnachts-Konzept (Rentier, Lebkuchen, Hütte, Schlitten vor dem Mond) und Classic-Szene mit Wolken; Saisontexte aus der zweiten Konzeptreihe |
+| `landingpage-v5.4` | V5.4 (14.11.) | – | neues Weihnachts-Konzept (Rentier, Lebkuchen, Hütte, Schlitten vor dem Mond) und Classic-Szene mit Wolken; Saisontexte aus der zweiten Konzeptreihe |
+| `landingpage-v5.5` | V5.5 (14.11.) | – | **Live-Version:** Szenen-Mitte in ComfyUI (FLUX.2 klein 4B, Inpainting auf Marcels PC) neu gemalt statt weichgezeichnet; Linktree oben in der Navigation; echte Social-Icons; Screenshots am PC alle nebeneinander ohne Scrollleiste |
 
 Eine ältere Version ansehen: `git checkout landingpage-v3` (oder auf GitHub den Tag auswählen). Die Commits vor `landingpage-v1` sind der ursprüngliche GitHub-Verlauf und bleiben unverändert.
 
