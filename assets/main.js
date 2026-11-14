@@ -41,11 +41,11 @@
   const seasonLabels = {
     classic:{emoji:'🏰',title:'Classic',de:'Das klassische Fantasy-Schloss in Violett, Blau und Gold.',en:'The signature fantasy castle in violet, blue and gold.',particle:['✦','✧','✦']},
     halloween:{emoji:'🎃',title:'Halloween',de:'Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.',en:'Mysterious worlds, enchanted nights and glowing pumpkins.',particle:['🦇','🍂','✦','🦇','🍁']},
-    autumn:{emoji:'🍂',title:'Autumn',de:'Goldene Wälder, fallende Blätter und die Wärme des Herbstes.',en:'Golden forests, falling leaves and the warmth of autumn.',particle:['🍂','🍁','🍂','✦']},
-    winter:{emoji:'❄️',title:'Winter',de:'Eiskristalle, verschneite Schlösser und magische Nordlichter.',en:'Icy crystals, snow-covered castles and magical northern lights.',particle:['❄','✦','❅','❆']},
-    spring:{emoji:'🌸',title:'Spring',de:'Kirschblüten, Pastellfarben und traumhafte Frühlingswelten.',en:'Cherry blossoms, pastel colors and dreamy spring worlds.',particle:['🌸','✿','🌸','✦']},
-    summer:{emoji:'☀️',title:'Summer',de:'Türkisblaues Wasser, goldene Sonnenstrahlen und Sommermagie.',en:'Turquoise water, golden sunshine and summer magic.',particle:['✦','✧','🦋','✦']},
-    christmas:{emoji:'🎄',title:'Christmas',de:'Festliche Lichter, Schneeglanz und zauberhafte Weihnachtsnächte.',en:'Festive lights, sparkling snow and enchanting Christmas nights.',particle:['❄','✧','✦','❅']}
+    autumn:{emoji:'🍂',title:'Autumn',de:'Goldene Wälder, warme Abendstimmung und magische Herbstwelten.',en:'Golden forests, warm evening light and magical autumn worlds.',particle:['🍂','🍁','🍂','✦']},
+    winter:{emoji:'❄️',title:'Winter',de:'Eine magische Winterwelt mit funkelnden Landschaften, Nordlichtern und kristallklarer Schönheit.',en:'A magical winter world with sparkling landscapes, northern lights and crystal-clear beauty.',particle:['❄','✦','❅','❆']},
+    spring:{emoji:'🌸',title:'Spring',de:'Blühende Landschaften, zarte Blüten und eine frische, romantische Atmosphäre.',en:'Blooming landscapes, delicate blossoms and a fresh, romantic atmosphere.',particle:['🌸','✿','🌸','✦']},
+    summer:{emoji:'☀️',title:'Summer',de:'Sonnige Welten, blühende Landschaften und kristallklares Wasser.',en:'Sunny worlds, blooming landscapes and crystal-clear water.',particle:['✦','✧','🦋','✦']},
+    christmas:{emoji:'🎄',title:'Christmas',de:'Eine magische Winterwelt voller Lichter, Schnee und festlicher Stimmung.',en:'A magical winter world full of lights, snow and festive spirit.',particle:['❄','✧','✦','❅']}
   };
   const seasonOrder = ['classic','halloween','autumn','winter','spring','summer','christmas'];
   const seasonCarouselOrder = ['classic','halloween','autumn','winter','spring','summer','christmas'];
