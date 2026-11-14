@@ -27,12 +27,12 @@
     }
   };
   const seasonData={
-    halloween:{de:['🎃 Halloween','Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.'],en:['🎃 Halloween','Mysterious worlds, magical nights, and glowing pumpkins.'],image:'assets/castle.webp',position:'center',a:'#ffaf64',b:'#bd78f8'},
-    autumn:{de:['🍂 Herbst','Warme Lichter, goldene Landschaften und gemütliche Momente.'],en:['🍂 Autumn','Warm lights, golden landscapes, and cozy moments.'],image:'assets/castle.webp',position:'center',a:'#f5b26e',b:'#e8846a'},
-    winter:{de:['❄️ Winter','Nordlichter, verträumte Berge und winterliche Fantasie.'],en:['❄️ Winter','Northern lights, dreamy mountains, and winter magic.'],image:'assets/aurora-phone.webp',position:'center',a:'#68e1ff',b:'#a49cfc'},
-    spring:{de:['🌸 Frühling','Leuchtende Farben und der Zauber neuer Anfänge.'],en:['🌸 Spring','Glowing colors and the magic of new beginnings.'],image:'assets/castle.webp',position:'center',a:'#f5a8e6',b:'#7edac5'},
-    summer:{de:['☀️ Sommer','Farbenfrohe Abenteuer und sonnige Fantasiewelten.'],en:['☀️ Summer','Colorful adventures and sunlit fantasy worlds.'],image:'assets/aurora-phone.webp',position:'center',a:'#8ee9ed',b:'#ffcb76'},
-    christmas:{de:['🎄 Weihnachten','Funkelnde Winterwelten und festliche Magie.'],en:['🎄 Christmas','Sparkling winter landscapes and holiday magic.'],image:'assets/castle.webp',position:'center',a:'#ffe4a7',b:'#80ddff'}
+    halloween:{de:['🎃 Halloween','Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.'],en:['🎃 Halloween','Mysterious worlds, magical nights, and glowing pumpkins.'],image:'assets/castle-halloween-full.webp',position:'center',a:'#ffaf64',b:'#bd78f8'},
+    autumn:{de:['🍂 Herbst','Warme Lichter, goldene Landschaften und gemütliche Momente.'],en:['🍂 Autumn','Warm lights, golden landscapes, and cozy moments.'],image:'assets/castle-autumn-full.webp',position:'center',a:'#f5b26e',b:'#e8846a'},
+    winter:{de:['❄️ Winter','Nordlichter, verträumte Berge und winterliche Fantasie.'],en:['❄️ Winter','Northern lights, dreamy mountains, and winter magic.'],image:'assets/castle-winter-full.webp',position:'center',a:'#68e1ff',b:'#a49cfc'},
+    spring:{de:['🌸 Frühling','Leuchtende Farben und der Zauber neuer Anfänge.'],en:['🌸 Spring','Glowing colors and the magic of new beginnings.'],image:'assets/castle-spring-full.webp',position:'center',a:'#f5a8e6',b:'#7edac5'},
+    summer:{de:['☀️ Sommer','Farbenfrohe Abenteuer und sonnige Fantasiewelten.'],en:['☀️ Summer','Colorful adventures and sunlit fantasy worlds.'],image:'assets/castle-summer-full.webp',position:'center',a:'#8ee9ed',b:'#ffcb76'},
+    christmas:{de:['🎄 Weihnachten','Funkelnde Winterwelten und festliche Magie.'],en:['🎄 Christmas','Sparkling winter landscapes and holiday magic.'],image:'assets/castle-christmas-full.webp',position:'center',a:'#ffe4a7',b:'#80ddff'}
   };
   const initialQuery=new URLSearchParams(location.search).get('lang');
   let lang=(initialQuery==='en'||initialQuery==='de')?initialQuery:'de';
