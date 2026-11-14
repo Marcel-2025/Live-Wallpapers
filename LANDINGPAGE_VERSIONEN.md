@@ -25,7 +25,8 @@ Jede Version liegt jetzt als eigener Commit mit Tag im Verlauf. Autor-Datum = Da
 | `landingpage-v3.1` | V3.1 (01.11.) | V3_1_ArtIsFantasy | ArtIsFantasy-Markenprofil und Social-Links |
 | `landingpage-v4` | V4 (14.11.) | V4_Seasonal_Experience | Interaktive Saison-Schlösser, Theme-Wechsel |
 | `landingpage-v5` | V5 (14.11.) | V5_Classic_Switch | Classic als Start, sieben Designs, große Schloss-Startsektion |
-| `landingpage-v5.1` | V5.1 (14.11.) | – | **Live-Version:** V5 + Google Play und ArtIsFantasy Linktree (Navigation, Startsektion, ArtIsFantasy-Bereich, Abschluss, Fußzeile), Fußzeilen-Links der bisherigen Live-Seite, FAQ auf „App ist live“ aktualisiert |
+| `landingpage-v5.1` | V5.1 (14.11.) | – | V5 + Google Play und ArtIsFantasy Linktree (Navigation, Startsektion, ArtIsFantasy-Bereich, Abschluss, Fußzeile), Fußzeilen-Links der bisherigen Live-Seite, FAQ auf „App ist live“ aktualisiert |
+| `landingpage-v5.2` | V5.2 (14.11.) | – | **Live-Version:** Saison-Szenen-Hero nach Halloween-Konzept: Deko rundherum je Design (Kürbisse, Mond, Wasserfälle, Schnee, Blüten, Weihnachtsbäume …), Schloss-Karussell, Saison-Titel mit drei Merkmalen, fallende Blätter/Schnee/Blüten und Fledermäuse |
 
 Eine ältere Version ansehen: `git checkout landingpage-v3` (oder auf GitHub den Tag auswählen). Die Commits vor `landingpage-v1` sind der ursprüngliche GitHub-Verlauf und bleiben unverändert.
 

@@ -39,18 +39,18 @@
     }
   };
   const seasonLabels = {
-    classic:{emoji:'🏰',title:'Classic',de:'Das klassische Fantasy-Schloss in Violett, Blau und Gold.',en:'The signature fantasy castle in violet, blue and gold.',particle:'✦'},
-    halloween:{emoji:'🎃',title:'Halloween',de:'Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.',en:'Mysterious worlds, enchanted nights and glowing pumpkins.',particle:'✦'},
-    autumn:{emoji:'🍂',title:'Autumn',de:'Goldene Wälder, fallende Blätter und die Wärme des Herbstes.',en:'Golden forests, falling leaves and the warmth of autumn.',particle:'🍂'},
-    winter:{emoji:'❄️',title:'Winter',de:'Eiskristalle, verschneite Schlösser und magische Nordlichter.',en:'Icy crystals, snow-covered castles and magical northern lights.',particle:'❄'},
-    spring:{emoji:'🌸',title:'Spring',de:'Kirschblüten, Pastellfarben und traumhafte Frühlingswelten.',en:'Cherry blossoms, pastel colors and dreamy spring worlds.',particle:'✿'},
-    summer:{emoji:'☀️',title:'Summer',de:'Türkisblaues Wasser, goldene Sonnenstrahlen und Sommermagie.',en:'Turquoise water, golden sunshine and summer magic.',particle:'✦'},
-    christmas:{emoji:'🎄',title:'Christmas',de:'Festliche Lichter, Schneeglanz und zauberhafte Weihnachtsnächte.',en:'Festive lights, sparkling snow and enchanting Christmas nights.',particle:'✧'}
+    classic:{emoji:'🏰',title:'Classic',de:'Das klassische Fantasy-Schloss in Violett, Blau und Gold.',en:'The signature fantasy castle in violet, blue and gold.',particle:['✦','✧','✦']},
+    halloween:{emoji:'🎃',title:'Halloween',de:'Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.',en:'Mysterious worlds, enchanted nights and glowing pumpkins.',particle:['🦇','🍂','✦','🦇','🍁']},
+    autumn:{emoji:'🍂',title:'Autumn',de:'Goldene Wälder, fallende Blätter und die Wärme des Herbstes.',en:'Golden forests, falling leaves and the warmth of autumn.',particle:['🍂','🍁','🍂','✦']},
+    winter:{emoji:'❄️',title:'Winter',de:'Eiskristalle, verschneite Schlösser und magische Nordlichter.',en:'Icy crystals, snow-covered castles and magical northern lights.',particle:['❄','✦','❅','❆']},
+    spring:{emoji:'🌸',title:'Spring',de:'Kirschblüten, Pastellfarben und traumhafte Frühlingswelten.',en:'Cherry blossoms, pastel colors and dreamy spring worlds.',particle:['🌸','✿','🌸','✦']},
+    summer:{emoji:'☀️',title:'Summer',de:'Türkisblaues Wasser, goldene Sonnenstrahlen und Sommermagie.',en:'Turquoise water, golden sunshine and summer magic.',particle:['✦','✧','🦋','✦']},
+    christmas:{emoji:'🎄',title:'Christmas',de:'Festliche Lichter, Schneeglanz und zauberhafte Weihnachtsnächte.',en:'Festive lights, sparkling snow and enchanting Christmas nights.',particle:['❄','✧','✦','❅']}
   };
   const seasonOrder = ['classic','halloween','autumn','winter','spring','summer','christmas'];
   const seasonCarouselOrder = ['classic','halloween','autumn','winter','spring','summer','christmas'];
   const seasonImage = (name,size='full') => `assets/castle-${name}-${size}.webp`;
-  const seasonAmbient = name => `assets/castle-${name}-ambient.webp`;
+  const seasonAmbient = name => (window.matchMedia('(max-width: 820px)').matches ? `assets/castle-${name}-ambient.webp` : `assets/scene-${name}.webp`);
   let lastBackdropSeason=null;
   let backdropIndex=0;
   const qs = new URLSearchParams(location.search);
@@ -119,13 +119,14 @@
     }
     lastBackdropSeason=name;
   }
+  try{const mq=window.matchMedia('(max-width: 820px)');const onMq=()=>{const s=lastBackdropSeason;if(!s)return;lastBackdropSeason=null;setBackdrop(s);};mq.addEventListener?mq.addEventListener('change',onMq):mq.addListener(onMq);}catch(_){}
   function renderSeasonParticles(name){
     const container=$('#season-particles');if(!container)return;
     container.replaceChildren();
     // Stable positions avoid flashing/random jumps during language changes.
-    const code=seasonLabels[name].particle;
-    for(let i=0;i<17;i++){
-      const item=document.createElement('span');item.className='season-particle';item.textContent=code;
+    const codes=[].concat(seasonLabels[name].particle);
+    for(let i=0;i<22;i++){
+      const item=document.createElement('span');item.className='season-particle';item.textContent=codes[i%codes.length];item.dataset.kind=codes[i%codes.length];
       item.style.left=`${(i*47+11)%97}%`;item.style.top=`${(i*23+7)%82}%`;
       item.style.animationDelay=`-${(i*1.7).toFixed(1)}s`;item.style.animationDuration=`${8+(i%5)*2}s`;
       item.style.fontSize=`${9+(i%4)*5}px`;container.append(item);
@@ -187,6 +188,7 @@
     if(decorLeft)decorLeft.textContent=data.emoji;
     if(decorRight)decorRight.textContent= name==='halloween'?'🦇':name==='autumn'?'🍁':name==='winter'?'❄':name==='spring'?'🌸':name==='summer'?'☀':'✦';
     document.querySelectorAll('[data-theme-logo]').forEach(img=>{const path=seasonImage(name,'small');if(img.getAttribute('src')!==path)img.src=path;});
+    renderSeasonCarousel(name);
     swapCenterIcon(name,userInitiated);
     const favicon=document.querySelector('link[rel="icon"]');if(favicon)favicon.href=`assets/favicon-${name}.png`;
     const themeColor=document.querySelector('meta[name="theme-color"]');

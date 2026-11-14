@@ -23,23 +23,15 @@
   <main id="main">
 
     <!-- V5: functional cinematic hero; artwork and all controls are independent DOM elements -->
-    <section class="season-experience" id="seasons" aria-labelledby="experience-title">
-      <div class="experience-background visible" id="season-bg-a" aria-hidden="true" style="background-image:url('assets/castle-classic-ambient.webp')"></div>
+    <section class="season-experience scene-hero" id="seasons" aria-labelledby="experience-title">
+      <div class="experience-background visible" id="season-bg-a" aria-hidden="true" ></div>
       <div class="experience-background" id="season-bg-b" aria-hidden="true"></div>
       <div class="experience-noise" aria-hidden="true"></div>
       <div class="experience-orbit" aria-hidden="true"></div>
       <div class="season-particles" id="season-particles" aria-hidden="true"></div>
       <div class="container experience-content">
-        <div class="v5-icon-stage">
-          <div class="v5-icon-aura" aria-hidden="true"></div>
-          <div class="v5-icon-shell" id="season-icon-shell">
-            <img id="center-castle" data-theme-large-icon src="assets/castle-classic-full.webp" width="1060" height="1060" alt="Classic: magisches Schloss unter einer leuchtenden goldenen Mondsichel" fetchpriority="high">
-            <span class="v5-icon-sheen" aria-hidden="true"></span>
-          </div>
-          <div class="v5-icon-ground-glow" aria-hidden="true"></div>
-        </div>
         <div class="experience-heading">
-          <span class="experience-kicker"><span class="kicker-dot"></span><span data-i18n="experienceEyebrow">DYNAMIC SEASONS</span></span>
+          <span class="experience-kicker"><span class="kicker-dot"></span><span data-i18n="experienceEyebrow">DYNAMIC SEASONS</span><span class="kicker-dot"></span></span>
           <h1 id="experience-title" data-i18n-html="experienceTitle">Eine neue Atmosphäre. <em>Jede Jahreszeit.</em></h1>
           <p data-i18n="experienceLead">Das Erscheinungsbild und ausgewählte Empfehlungen verändern sich passend zur Saison. Dein Lieblingsdesign bleibt jederzeit auswählbar.</p>
         </div>
@@ -52,10 +44,33 @@
           <button type="button" role="tab" aria-selected="false" data-season="summer" tabindex="-1"><span aria-hidden="true">☀️</span> Summer</button>
           <button type="button" role="tab" aria-selected="false" data-season="christmas" tabindex="-1"><span aria-hidden="true">🎄</span> Christmas</button>
         </div>
-        <p class="experience-tip" data-i18n="experienceTip">Wähle ein Design und erlebe die Designvorschau.</p>
-        <div class="cta-links experience-links"><a class="button primary" href="https://play.google.com/store/apps/details?id=dev.flondy.wallpapers" target="_blank" rel="noopener noreferrer"><img src="assets/store-icon.webp" alt="" width="22" height="22" class="btn-icon"><span data-i18n="playCTA">Bei Google Play laden</span> ↗</a><a class="button outlined" href="https://linktr.ee/artisfantasy" target="_blank" rel="noopener noreferrer"><span data-i18n="linktreeCTA">ArtIsFantasy Linktree</span> ↗</a></div>
-        <span id="experience-season-title" class="visually-hidden" aria-live="polite">Classic Premium</span>
-        <span id="experience-season-description" class="visually-hidden">Das klassische Fantasy-Schloss.</span>
+        <div class="scene-carousel">
+          <button type="button" class="scene-arrow" id="season-prev" aria-label="Vorheriges Design">‹</button>
+          <div class="scene-track">
+            <button type="button" class="experience-icon" data-slot="-3"><img src="assets/castle-halloween-small.webp" alt="" width="160" height="160" loading="lazy"></button><button type="button" class="experience-icon" data-slot="-2"><img src="assets/castle-halloween-small.webp" alt="" width="160" height="160" loading="lazy"></button><button type="button" class="experience-icon" data-slot="-1"><img src="assets/castle-halloween-small.webp" alt="" width="160" height="160" loading="lazy"></button>
+            <div class="v5-icon-stage">
+              <div class="v5-icon-aura" aria-hidden="true"></div>
+              <div class="v5-icon-shell" id="season-icon-shell">
+                <img id="center-castle" data-theme-large-icon src="assets/castle-classic-full.webp" width="1060" height="1060" alt="Classic: magisches Schloss unter einer leuchtenden goldenen Mondsichel" fetchpriority="high">
+                <span class="v5-icon-sheen" aria-hidden="true"></span>
+              </div>
+              <div class="scene-ring" aria-hidden="true"></div>
+            </div>
+            <button type="button" class="experience-icon" data-slot="1"><img src="assets/castle-halloween-small.webp" alt="" width="160" height="160" loading="lazy"></button><button type="button" class="experience-icon" data-slot="2"><img src="assets/castle-halloween-small.webp" alt="" width="160" height="160" loading="lazy"></button><button type="button" class="experience-icon" data-slot="3"><img src="assets/castle-halloween-small.webp" alt="" width="160" height="160" loading="lazy"></button>
+          </div>
+          <button type="button" class="scene-arrow" id="season-next" aria-label="Nächstes Design">›</button>
+        </div>
+        <div class="scene-info">
+          <span class="scene-pill"><span aria-hidden="true">✦</span> <span data-i18n="experienceSelection">VOLLES SAISON-ERLEBNIS</span></span>
+          <h2 class="scene-title" id="experience-season-title" aria-live="polite">🏰 Classic</h2>
+          <p class="scene-desc" id="experience-season-description">Das klassische Fantasy-Schloss in Violett, Blau und Gold.</p>
+        </div>
+        <div class="scene-features">
+          <div class="scene-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><strong data-i18n="experienceFeature1">Wechselndes Design</strong><small data-i18n="experienceFeature1Text">Der gesamte Look passt sich der Saison an.</small></span></div>
+          <div class="scene-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><strong data-i18n="experienceFeature2">Saisonale Effekte</strong><small data-i18n="experienceFeature2Text">Farben, Animationen und Atmosphäre.</small></span></div>
+          <div class="scene-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 17 5-5 4 4 2-2 5 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="16" cy="9" r="1.6" fill="currentColor"/></svg><span><strong data-i18n="experienceFeature3">Passende Live-Wallpaper</strong><small data-i18n="experienceFeature3Text">Entdecke die Magie aller Jahreszeiten.</small></span></div>
+        </div>
+        <div class="cta-links experience-links"><a class="button primary" href="https://play.google.com/store/apps/details?id=dev.flondy.wallpapers" target="_blank" rel="noopener noreferrer"><img src="assets/store-icon.webp" alt="" width="22" height="22" class="btn-icon"><span data-i18n="playCTA">Bei Google Play laden</span> ↗</a><a class="button outlined" href="#premium"><span aria-hidden="true">♛</span> <span data-i18n="experiencePrimary">Premium entdecken</span></a><a class="button outlined" href="https://linktr.ee/artisfantasy" target="_blank" rel="noopener noreferrer"><span data-i18n="linktreeCTA">ArtIsFantasy Linktree</span> ↗</a></div>
       </div>
     </section>
 
