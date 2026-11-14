@@ -6,15 +6,15 @@
   <meta name="description" content="ArtIsFantasy: Live Wallpapers – 790 Wallpaper, darunter 27 Live-Hintergründe, 78 Kategorien und 27 Kollektionen. Fantasy, Kosmos, Natur und saisonale Designs.">
   <meta property="og:type" content="website"><meta property="og:title" content="Live Wallpapers – Bring Fantasy to Your Screen"><meta property="og:description" content="790 Wallpaper · 27 animierte Live-Hintergründe · 78 Kategorien · 27 Kollektionen. Entdecke ArtIsFantasy Live Wallpapers für Android.">
   <meta property="og:image" content="assets/share.jpg"><meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="assets/favicon-halloween.png"><link rel="apple-touch-icon" href="assets/app-icons/halloween.png">
-  <link rel="preload" as="image" href="assets/castle-halloween-full.webp"><link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon-classic.png"><link rel="apple-touch-icon" href="assets/icon-castle.png">
+  <link rel="preload" as="image" href="assets/castle-classic-full.webp"><link rel="stylesheet" href="assets/styles.css">
   <title>Live Wallpapers – ArtIsFantasy × Flondy</title>
 </head>
-<body data-page="home" data-active-season="halloween">
+<body data-page="home" data-active-season="classic">
   <a class="skip-link" href="#main">Zum Hauptinhalt</a>
   <div class="background-stars" aria-hidden="true"></div><div class="page-season-glow" aria-hidden="true"></div>
   <header class="site-header"><div class="container nav-shell">
-    <a class="brand" href="index.html" aria-label="Live Wallpapers – Home"><img src="assets/castle-halloween-small.webp" data-theme-logo alt="" width="46" height="46"><span><strong>Live Wallpapers</strong><small>ARTISFANTASY <b>×</b> FLONDY</small></span></a>
+    <a class="brand" href="index.html" aria-label="Live Wallpapers – Home"><img src="assets/castle-classic-small.webp" data-theme-logo alt="Live Wallpapers App Icon" width="46" height="46"><span><strong>Live Wallpapers</strong><small>ARTISFANTASY <b>×</b> FLONDY</small></span></a>
     <nav class="nav-links" id="site-menu" aria-label="Hauptnavigation">
       <a href="#features" data-i18n="navFeatures">Highlights</a><a href="#seasons" data-i18n="navSeasons">Jahreszeiten</a><a href="#screenshots" data-i18n="navScreens">Screenshots</a><a href="#premium">Premium</a><a href="#artisfantasy">ArtIsFantasy</a><a href="#faq">FAQ</a>
     </nav>
@@ -22,74 +22,42 @@
   </div></header>
   <main id="main">
 
-    <!-- V4: fully functional, page-wide seasonal theme switcher -->
+    <!-- V5: functional cinematic hero; artwork and all controls are independent DOM elements -->
     <section class="season-experience" id="seasons" aria-labelledby="experience-title">
-      <div class="experience-background visible" id="season-bg-a" aria-hidden="true" style="background-image:url('assets/castle-halloween-ambient.webp')"></div>
+      <div class="experience-background visible" id="season-bg-a" aria-hidden="true" style="background-image:url('assets/castle-classic-ambient.webp')"></div>
       <div class="experience-background" id="season-bg-b" aria-hidden="true"></div>
       <div class="experience-noise" aria-hidden="true"></div>
-      <div class="experience-decor decor-left" aria-hidden="true"><span id="season-decor-left">🎃</span></div>
-      <div class="experience-decor decor-right" aria-hidden="true"><span id="season-decor-right">✦</span></div>
+      <div class="experience-orbit" aria-hidden="true"></div>
       <div class="season-particles" id="season-particles" aria-hidden="true"></div>
       <div class="container experience-content">
-        <div class="experience-heading">
-          <span class="experience-kicker"><span class="kicker-dot"></span><span data-i18n="experienceEyebrow">DYNAMIC SEASONS</span><span class="kicker-dot alt"></span></span>
-          <h1 id="experience-title" data-i18n-html="experienceTitle">Eine neue Atmosphäre. <em>Jede Jahreszeit.</em></h1>
-          <p data-i18n="experienceLead">Das Erscheinungsbild und die App-Erfahrung verändern sich mit der ausgewählten Saison – mit individuellen Farben, Effekten und Schloss-Icons.</p>
-        </div>
-        <div class="experience-switch" role="tablist" aria-label="Saisonales Design" id="experience-switch">
-          <button type="button" role="tab" aria-selected="true" data-season="halloween"><span aria-hidden="true">🎃</span> Halloween</button>
-          <button type="button" role="tab" aria-selected="false" data-season="autumn"><span aria-hidden="true">🍂</span> Autumn</button>
-          <button type="button" role="tab" aria-selected="false" data-season="winter"><span aria-hidden="true">❄️</span> Winter</button>
-          <button type="button" role="tab" aria-selected="false" data-season="spring"><span aria-hidden="true">🌸</span> Spring</button>
-          <button type="button" role="tab" aria-selected="false" data-season="summer"><span aria-hidden="true">☀️</span> Summer</button>
-          <button type="button" role="tab" aria-selected="false" data-season="christmas"><span aria-hidden="true">🎄</span> Christmas</button>
-        </div>
-        <div class="experience-stage">
-          <button class="experience-arrow left" id="season-prev" type="button" aria-label="Vorherige Jahreszeit">&#8592;</button>
-          <div class="experience-icons" id="experience-icons" aria-label="Schloss-Icons der Jahreszeiten">
-            <button class="experience-icon" type="button" data-slot="-2" aria-label="Saison auswählen"><img src="assets/castle-autumn-small.webp" alt="" width="220" height="220"></button>
-            <button class="experience-icon" type="button" data-slot="-1" aria-label="Saison auswählen"><img src="assets/castle-winter-small.webp" alt="" width="220" height="220"></button>
-            <button class="experience-icon active" type="button" data-slot="0" aria-label="Aktuelle Saison"><img src="assets/castle-halloween-full.webp" alt="" width="960" height="960" fetchpriority="high"></button>
-            <button class="experience-icon" type="button" data-slot="1" aria-label="Saison auswählen"><img src="assets/castle-spring-small.webp" alt="" width="220" height="220"></button>
-            <button class="experience-icon" type="button" data-slot="2" aria-label="Saison auswählen"><img src="assets/castle-summer-small.webp" alt="" width="220" height="220"></button>
+        <div class="v5-icon-stage">
+          <div class="v5-icon-aura" aria-hidden="true"></div>
+          <div class="v5-icon-shell" id="season-icon-shell">
+            <img id="center-castle" data-theme-large-icon src="assets/castle-classic-full.webp" width="1060" height="1060" alt="Classic: magisches Schloss unter einer leuchtenden goldenen Mondsichel" fetchpriority="high">
+            <span class="v5-icon-sheen" aria-hidden="true"></span>
           </div>
-          <button class="experience-arrow right" id="season-next" type="button" aria-label="Nächste Jahreszeit">&#8594;</button>
-          <div class="experience-icon-glow" aria-hidden="true"></div>
+          <div class="v5-icon-ground-glow" aria-hidden="true"></div>
         </div>
-        <div class="experience-current" aria-live="polite" aria-atomic="true">
-          <span class="experience-micro"><span aria-hidden="true">✦</span> <span data-i18n="experienceSelection">VOLLES SAISON-ERLEBNIS</span></span>
-          <h2 id="experience-season-title">🎃 Halloween</h2>
-          <p id="experience-season-description">Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.</p>
+        <div class="experience-heading">
+          <span class="experience-kicker"><span class="kicker-dot"></span><span data-i18n="experienceEyebrow">DYNAMIC SEASONS</span></span>
+          <h1 id="experience-title" data-i18n-html="experienceTitle">Eine neue Atmosphäre. <em>Jede Jahreszeit.</em></h1>
+          <p data-i18n="experienceLead">Das Erscheinungsbild und ausgewählte Empfehlungen verändern sich passend zur Saison. Dein Lieblingsdesign bleibt jederzeit auswählbar.</p>
         </div>
-        <div class="experience-features">
-          <div class="experience-feature"><span class="experience-feature-icon">▱</span><span><strong data-i18n="experienceFeature1">Wechselndes Design</strong><small data-i18n="experienceFeature1Text">Der gesamte Look passt sich der Saison an.</small></span></div>
-          <div class="experience-feature"><span class="experience-feature-icon">✧</span><span><strong data-i18n="experienceFeature2">Saisonale Effekte</strong><small data-i18n="experienceFeature2Text">Farben, Animationen und Atmosphäre.</small></span></div>
-          <div class="experience-feature"><span class="experience-feature-icon">▧</span><span><strong data-i18n="experienceFeature3">Passende Live-Wallpaper</strong><small data-i18n="experienceFeature3Text">Entdecke die Magie aller Jahreszeiten.</small></span></div>
+        <div class="experience-switch" role="tablist" aria-label="Wallpaper-Design" id="experience-switch">
+          <button type="button" role="tab" aria-selected="true" data-season="classic" tabindex="0"><span aria-hidden="true">🏰</span> Classic</button>
+          <button type="button" role="tab" aria-selected="false" data-season="halloween" tabindex="-1"><span aria-hidden="true">🎃</span> Halloween</button>
+          <button type="button" role="tab" aria-selected="false" data-season="autumn" tabindex="-1"><span aria-hidden="true">🍂</span> Autumn</button>
+          <button type="button" role="tab" aria-selected="false" data-season="winter" tabindex="-1"><span aria-hidden="true">❄️</span> Winter</button>
+          <button type="button" role="tab" aria-selected="false" data-season="spring" tabindex="-1"><span aria-hidden="true">🌸</span> Spring</button>
+          <button type="button" role="tab" aria-selected="false" data-season="summer" tabindex="-1"><span aria-hidden="true">☀️</span> Summer</button>
+          <button type="button" role="tab" aria-selected="false" data-season="christmas" tabindex="-1"><span aria-hidden="true">🎄</span> Christmas</button>
         </div>
-        <div class="experience-actions">
-          <a class="button season-primary" href="#premium"><span aria-hidden="true">♛</span><span data-i18n="experiencePrimary">Premium entdecken</span><span aria-hidden="true">→</span></a>
-          <a class="button season-outlined" href="#screenshots"><span aria-hidden="true">▷</span><span data-i18n="experienceSecondary">App-Vorschau ansehen</span></a>
-        </div>
-        <p class="experience-tip" data-i18n="experienceTip">Wähle oben eine Saison oder wechsle mit den Pfeilen – das Design der ganzen Seite passt sich an.</p>
+        <p class="experience-tip" data-i18n="experienceTip">Wähle ein Design und erlebe die Designvorschau.</p>
+        <span id="experience-season-title" class="visually-hidden" aria-live="polite">Classic Premium</span>
+        <span id="experience-season-description" class="visually-hidden">Das klassische Fantasy-Schloss.</span>
       </div>
     </section>
 
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <span class="eyebrow"><span class="eyebrow-spark">✦</span> ARTISFANTASY × FLONDY <span class="eyebrow-line"></span> <span data-i18n="heroEyebrow">DIE MAGIE BEGINNT HIER</span></span>
-        <h1 id="hero-title" data-i18n-html="heroTitle">Ein bisschen <em>Magie.</em><br>Für deinen Bildschirm.</h1>
-        <p class="hero-lead" data-i18n="heroLead">790 handverlesene Wallpaper – darunter 27 animierte Live-Hintergründe. Erkunde Fantasy-Welten, Kosmos, Natur und alle Jahreszeiten in 78 Kategorien.</p>
-        <div class="hero-buttons"><a href="#screenshots" class="button primary"><span aria-hidden="true">✧</span> <span data-i18n="heroPrimary">App-Vorschau ansehen</span> <span aria-hidden="true">↗</span></a><a href="#seasons" class="button outlined"><span data-i18n="heroSecondary">Kollektionen entdecken</span> <span aria-hidden="true">→</span></a></div>
-        <div class="hero-notes"><span class="note-pill"><span class="tiny-dot"></span><span data-i18n="heroSoon">Android 1.2.0 · Veröffentlichung in Vorbereitung</span></span><span data-i18n="heroPlatform">Build erstellt & automatisch getestet · Gerätetest steht aus</span></div>
-      </div>
-      <div class="hero-visual" aria-label="Live Wallpapers Schloss-App-Icon als Produktvorschau">
-        <div class="planet-ring ring-one" aria-hidden="true"></div><div class="planet-ring ring-two" aria-hidden="true"></div>
-        <div class="hero-icon-frame"><img src="assets/castle-halloween-full.webp" data-theme-large-icon alt="Live Wallpapers: Saisonales Schloss-App-Icon" width="980" height="980" fetchpriority="high"><div class="icon-shimmer" aria-hidden="true"></div></div>
-        <div class="hero-halo hero-halo-a" aria-hidden="true">✦</div><div class="hero-halo hero-halo-b" aria-hidden="true">✧</div>
-        <div class="float-info float-top"><span class="info-asterisk">✧</span><span><strong>01 / 27</strong><small data-i18n="heroFloatTop">Magische Kollektionen</small></span></div>
-        <div class="float-info float-bottom"><img src="assets/season-winter-tiny.webp" alt="" width="46" height="46"><span><strong data-i18n="heroFloatTitle">Winter Dreams</strong><small data-i18n="heroFloatBottom">Fantasie für jede Saison</small></span></div>
-      </div>
-    </section>
     <div class="hero-ribbon container" aria-label="Designschwerpunkte"><span>FANTASY WORLDS</span><span class="ribbon-star">✦</span><span>ANIMATED ART</span><span class="ribbon-star">✦</span><span>SEASONAL MAGIC</span><span class="ribbon-star">✦</span><span>PREMIUM WALLPAPERS</span></div>
 
     <section class="stats-section container" aria-label="App-Katalog in Zahlen">
@@ -122,15 +90,17 @@
     </div></section>
 
     <section class="section screenshots-section" id="screenshots"><div class="container">
-      <div class="section-top screenshots-top"><div><div class="kicker">03 <span class="slash">/</span> <span data-i18n="shotsKicker">APP PREVIEW</span></div><h2 data-i18n-html="shotsTitle">Ein Blick hinein.<br><em>Ohne Kompromisse.</em></h2></div><div class="screenshot-head-right"><p class="section-aside" data-i18n="shotsLead">Fünf Design-Mockups als kompakte Vorschau – im korrekten Seitenverhältnis. Zum Vergrößern anklicken.</p><div class="gallery-controls"><button type="button" id="gallery-prev" class="arrow-button" aria-label="Vorheriger Screenshot">←</button><button type="button" id="gallery-next" class="arrow-button" aria-label="Nächster Screenshot">→</button></div></div></div>
+      <div class="section-top screenshots-top"><div><div class="kicker">03 <span class="slash">/</span> <span data-i18n="shotsKicker">APP PREVIEW</span></div><h2 data-i18n-html="shotsTitle">Mehr Einblicke.<br><em>Mehr Magie.</em></h2></div><div class="screenshot-head-right"><p class="section-aside" data-i18n="shotsLead">Sieben Premium-Screenshots zeigen Startseite, Einzelmotiv, Kollektion, Live-Bereich, Suche, Entdecken und Design. Beim Sprachwechsel passen sich auch die Screenshots an.</p><div class="gallery-controls"><button type="button" id="gallery-prev" class="arrow-button" aria-label="Vorheriger Screenshot">←</button><button type="button" id="gallery-next" class="arrow-button" aria-label="Nächster Screenshot">→</button></div></div></div>
       <div class="screenshots-scroll" id="screenshots-scroll" tabindex="0" aria-label="Screenshots, horizontal scrollen">
-        <button class="screen-item" type="button" data-preview="assets/screenshot-01.webp" data-caption-de="Startseite" data-caption-en="Home" aria-label="Screenshot Startseite vergrößern"><span class="screen-image"><img src="assets/screenshot-01.webp" width="308" height="917" alt="App-Konzept Startseite mit Fantasy-Schloss" loading="lazy"></span><span class="screen-meta"><b>01</b><strong data-i18n="shot1">Startseite</strong></span></button>
-        <button class="screen-item" type="button" data-preview="assets/screenshot-02.webp" data-caption-de="Kategorien & Suche" data-caption-en="Categories & Search" aria-label="Screenshot Kategorien vergrößern"><span class="screen-image"><img src="assets/screenshot-02.webp" width="308" height="917" alt="App-Konzept Kategorien und Suchfunktion" loading="lazy"></span><span class="screen-meta"><b>02</b><strong data-i18n="shot2">Kategorien & Suche</strong></span></button>
-        <button class="screen-item" type="button" data-preview="assets/screenshot-03.webp" data-caption-de="Live-Vorschau" data-caption-en="Live Preview" aria-label="Screenshot Live-Vorschau vergrößern"><span class="screen-image"><img src="assets/screenshot-03.webp" width="308" height="917" alt="App-Konzept Live-Wallpaper mit Vorschau und Festlegen" loading="lazy"></span><span class="screen-meta"><b>03</b><strong data-i18n="shot3">Live-Vorschau</strong></span></button>
-        <button class="screen-item" type="button" data-preview="assets/screenshot-04.webp" data-caption-de="Jahreszeiten" data-caption-en="Seasons" aria-label="Screenshot Jahreszeiten vergrößern"><span class="screen-image"><img src="assets/screenshot-04.webp" width="308" height="917" alt="App-Konzept saisonale Kollektionen" loading="lazy"></span><span class="screen-meta"><b>04</b><strong data-i18n="shot4">Jahreszeiten</strong></span></button>
-        <button class="screen-item" type="button" data-preview="assets/screenshot-05.webp" data-caption-de="Favoriten & Premium" data-caption-en="Favorites & Premium" aria-label="Screenshot Favoriten und Premium vergrößern"><span class="screen-image"><img src="assets/screenshot-05.webp" width="308" height="917" alt="App-Konzept Favoriten und Premium-Kunst" loading="lazy"></span><span class="screen-meta"><b>05</b><strong data-i18n="shot5">Favoriten & Premium</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="0" data-preview="assets/screenshot-de-01.webp" data-caption-de="Startseite" data-caption-en="Home" aria-label="Screenshot Startseite vergrößern"><span class="screen-image"><img src="assets/screenshot-de-01.webp" width="1080" height="1920" alt="Startseite der Live Wallpapers App" loading="lazy"></span><span class="screen-meta"><b>01</b><strong data-shot-label>Startseite</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="1" data-preview="assets/screenshot-de-02.webp" data-caption-de="Vorschau & Festlegen" data-caption-en="Preview & Set" aria-label="Screenshot Vorschau vergrößern"><span class="screen-image"><img src="assets/screenshot-de-02.webp" width="1080" height="1920" alt="Einzelmotiv mit Vorschau und Freischaltung" loading="lazy"></span><span class="screen-meta"><b>02</b><strong data-shot-label>Vorschau & Festlegen</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="2" data-preview="assets/screenshot-de-03.webp" data-caption-de="Kollektion" data-caption-en="Collection" aria-label="Screenshot Kollektion vergrößern"><span class="screen-image"><img src="assets/screenshot-de-03.webp" width="1080" height="1920" alt="Kollektion mit mehreren Weihnachtsmotiven" loading="lazy"></span><span class="screen-meta"><b>03</b><strong data-shot-label>Kollektion</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="3" data-preview="assets/screenshot-de-04.webp" data-caption-de="Live-Wallpaper" data-caption-en="Live Wallpapers" aria-label="Screenshot Live-Bereich vergrößern"><span class="screen-image"><img src="assets/screenshot-de-04.webp" width="1080" height="1920" alt="Live-Wallpaper Übersicht" loading="lazy"></span><span class="screen-meta"><b>04</b><strong data-shot-label>Live-Wallpaper</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="4" data-preview="assets/screenshot-de-05.webp" data-caption-de="Suche & Vorschläge" data-caption-en="Search & Suggestions" aria-label="Screenshot Suche vergrößern"><span class="screen-image"><img src="assets/screenshot-de-05.webp" width="1080" height="1920" alt="Suche mit Vorschlägen" loading="lazy"></span><span class="screen-meta"><b>05</b><strong data-shot-label>Suche & Vorschläge</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="5" data-preview="assets/screenshot-de-06.webp" data-caption-de="Entdecken" data-caption-en="Explore" aria-label="Screenshot Entdecken vergrößern"><span class="screen-image"><img src="assets/screenshot-de-06.webp" width="1080" height="1920" alt="Kategorien und Entdecken Bereich" loading="lazy"></span><span class="screen-meta"><b>06</b><strong data-shot-label>Entdecken</strong></span></button>
+        <button class="screen-item" type="button" data-shot-index="6" data-preview="assets/screenshot-de-07.webp" data-caption-de="Design & Themen" data-caption-en="Theme & Design" aria-label="Screenshot Design vergrößern"><span class="screen-image"><img src="assets/screenshot-de-07.webp" width="1080" height="1920" alt="Design und Themen Auswahl" loading="lazy"></span><span class="screen-meta"><b>07</b><strong data-shot-label>Design & Themen</strong></span></button>
       </div>
-      <p class="preview-disclaimer" data-i18n="shotsNote">Hinweis: Die Bilder sind Design-Mockups, keine Screenshots aus dem aktuellen 1.2.0-Build. Echte Store-Screenshots liegen im App-Projekt vor.</p>
+      <p class="preview-disclaimer" data-i18n="shotsNote">Hinweis: Die Bilder sind hochwertige Design-Mockups der geplanten App-Oberfläche. Beim Sprachwechsel werden automatisch die passende deutsche oder englische Version angezeigt.</p>
     </div></section>
 
     <section class="section" id="premium"><div class="container"><div class="premium-box"><div class="premium-content"><div class="kicker">04 <span class="slash">/</span> PREMIUM COLLECTIONS</div><h2 data-i18n-html="premiumTitle">Kunst, die bleibt.<br><em>Momente, die leuchten.</em></h2><p data-i18n="premiumLead">Wähle einzelne Kunstwerke über Credits oder nutze Premium als monatliches oder jährliches Abo. Im Android-Release-Build ist Google Play Billing integriert; echte Käufe müssen noch im Play-Test geprüft werden.</p><div class="premium-points"><span>✧ <span data-i18n="premiumP1">Einzelne Motive dauerhaft freischalten</span></span><span>✧ <span data-i18n="premiumP2">Premium-Abo mit Zugriff auf alle Motive</span></span><span>✧ <span data-i18n="premiumP3">Vier Credit-Pakete in Google Play</span></span></div><span class="premium-soon" data-i18n="premiumSoon">Kaufabwicklung integriert · Live-Test ausstehend</span></div><div class="premium-art" aria-hidden="true"><div class="premium-art-glow"></div><img src="assets/castle-halloween-small.webp" data-theme-logo alt="" width="512" height="512"><span class="premium-gem">✧</span></div></div></div></section>
@@ -176,7 +146,7 @@
 
     <section class="cta-section"><div class="container"><div class="cta-panel"><span class="eyebrow">✦ ARTISFANTASY × FLONDY</span><h2 data-i18n-html="ctaTitle">Dein nächster Hintergrund?<br><em>Ein kleines Kunstwerk.</em></h2><p data-i18n="ctaLead">Android 1.2.0 · 790 Wallpaper. Entdecke unsere Kunst und erfahre mehr über die App.</p><div class="cta-links"><a class="button primary" href="https://www.deviantart.com/artisfantasy/gallery" rel="noopener noreferrer" target="_blank"><span data-i18n="ctaArt">ArtIsFantasy entdecken</span> ↗</a><a class="button outlined" href="https://flondy.github.io/app-store/" rel="noopener noreferrer" target="_blank"><span data-i18n="ctaDev">Flondy Apps ansehen</span> ↗</a></div></div></div></section>
   </main>
-  <footer class="site-footer"><div class="container footer-main"><div><a class="brand" href="index.html"><img src="assets/castle-halloween-small.webp" data-theme-logo alt="" width="42" height="42"><span><strong>Live Wallpapers</strong><small>ARTISFANTASY × FLONDY</small></span></a><p data-i18n="footerIntro">KI-generierte Fantasy-Kunst von ArtIsFantasy trifft auf App-Entwicklung von Flondy.</p></div><div class="footer-links"><a href="datenschutz.html" data-legal-link data-i18n="footerPrivacy">Datenschutzerklärung</a><a href="impressum.html" data-legal-link data-i18n="footerImprint">Impressum</a><a href="konto-loeschen.html" data-legal-link data-i18n="footerDelete">Konto & Daten löschen</a><a href="mailto:flondy.dev@gmail.com" data-i18n="footerContact">Kontakt</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> ArtIsFantasy × Flondy</span><span data-i18n="footerTag">Bring Fantasy to Your Screen ✦</span></div></footer>
+  <footer class="site-footer"><div class="container footer-main"><div><a class="brand" href="index.html"><img src="assets/castle-classic-small.webp" data-theme-logo alt="Live Wallpapers App Icon" width="42" height="42"><span><strong>Live Wallpapers</strong><small>ARTISFANTASY × FLONDY</small></span></a><p data-i18n="footerIntro">KI-generierte Fantasy-Kunst von ArtIsFantasy trifft auf App-Entwicklung von Flondy.</p></div><div class="footer-links"><a href="datenschutz.html" data-legal-link data-i18n="footerPrivacy">Datenschutzerklärung</a><a href="impressum.html" data-legal-link data-i18n="footerImprint">Impressum</a><a href="konto-loeschen.html" data-legal-link data-i18n="footerDelete">Konto & Daten löschen</a><a href="mailto:flondy.dev@gmail.com" data-i18n="footerContact">Kontakt</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> ArtIsFantasy × Flondy</span><span data-i18n="footerTag">Bring Fantasy to Your Screen ✦</span></div></footer>
   <dialog id="preview-dialog" class="preview-dialog" aria-labelledby="dialog-caption"><div class="dialog-head"><span id="dialog-caption">App-Vorschau</span><button id="dialog-close" type="button" aria-label="Schließen">✕</button></div><img id="dialog-image" src="assets/screenshot-01.webp" alt="Vergrößerte App-Vorschau" width="308" height="917"></dialog>
   <script src="assets/main.js" defer></script>
 </body>
