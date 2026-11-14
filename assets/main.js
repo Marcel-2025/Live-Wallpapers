@@ -2,7 +2,8 @@
 (() => {
   const translations = {
     de: {
-      navFeatures:'Highlights',navSeasons:'Jahreszeiten',navScreens:'Screenshots',navCTA:'App ansehen ↗',
+      experienceEyebrow:'DYNAMIC SEASONS',experienceTitle:'Eine neue Atmosphäre. <em>Jede Jahreszeit.</em>',experienceLead:'Das Erscheinungsbild und die App-Erfahrung verändern sich mit der ausgewählten Saison – mit individuellen Farben, Effekten und Schloss-Icons.',experienceSelection:'VOLLES SAISON-ERLEBNIS',experienceFeature1:'Wechselndes Design',experienceFeature1Text:'Der gesamte Look passt sich der Saison an.',experienceFeature2:'Saisonale Effekte',experienceFeature2Text:'Farben, Animationen und Atmosphäre.',experienceFeature3:'Passende Live-Wallpaper',experienceFeature3Text:'Entdecke die Magie aller Jahreszeiten.',experiencePrimary:'Premium entdecken',experienceSecondary:'App-Vorschau ansehen',experienceTip:'Wähle oben eine Saison oder wechsle mit den Pfeilen – das Design der ganzen Seite passt sich an.',
+      navFeatures:'Funktionen',navSeasons:'Jahreszeiten',navScreens:'Einblicke',navCTA:'Premium entdecken',
       heroEyebrow:'DIE MAGIE BEGINNT HIER',heroTitle:'Ein bisschen <em>Magie.</em><br>Für deinen Bildschirm.',
       heroLead:'790 handverlesene Wallpaper – darunter 27 animierte Live-Hintergründe. Erkunde Fantasy-Welten, Kosmos, Natur und alle Jahreszeiten in 78 Kategorien.',
       heroPrimary:'App-Vorschau ansehen',heroSecondary:'Kollektionen entdecken',heroSoon:'Android 1.2.0 · Veröffentlichung in Vorbereitung',heroPlatform:'Build erstellt & automatisch getestet · Gerätetest steht aus',heroFloatTop:'Kuratierte Kollektionen',heroFloatTitle:'Winter Dreams',heroFloatBottom:'Fantasie für jede Saison',
@@ -19,7 +20,8 @@
       legalIntroPrivacy:'Datenschutzerklärung',legalIntroImprint:'Impressum',legalIntroDeletion:'Konto & Daten löschen',legalSubPrivacy:'Informationen zum Datenschutz auf dieser Website und zum geplanten Funktionsumfang der App.',legalSubImprint:'Angaben zum verantwortlichen Anbieter der Website.',legalSubDeletion:'So kannst du Auskunft und Löschung deiner Daten anfordern.'
     },
     en: {
-      navFeatures:'Highlights',navSeasons:'Seasons',navScreens:'Screenshots',navCTA:'Explore app ↗',
+      experienceEyebrow:'DYNAMIC SEASONS',experienceTitle:'A new atmosphere. <em>Every season.</em>',experienceLead:'The entire website transforms with your selected season – including fantasy castle icons, colors, effects and atmospheric backgrounds.',experienceSelection:'THE FULL SEASONAL EXPERIENCE',experienceFeature1:'Dynamic design',experienceFeature1Text:'The entire look adapts to your selected season.',experienceFeature2:'Seasonal effects',experienceFeature2Text:'Distinct colors, subtle animations and atmosphere.',experienceFeature3:'Matching live wallpapers',experienceFeature3Text:'Discover the magic of every season.',experiencePrimary:'Explore Premium',experienceSecondary:'Explore app preview',experienceTip:'Choose a season above or use the arrows – the entire page changes with your selection.',
+      navFeatures:'Features',navSeasons:'Seasons',navScreens:'Previews',navCTA:'Explore Premium',
       heroEyebrow:'THE MAGIC STARTS HERE',heroTitle:'A little <em>magic.</em><br>For your screen.',
       heroLead:'Discover 790 curated wallpapers, including 27 animated live backgrounds. Explore fantasy, space, nature, and seasonal worlds across 78 categories.',
       heroPrimary:'Explore app preview',heroSecondary:'Discover collections',heroSoon:'Android 1.2.0 · Release in preparation',heroPlatform:'Built & automated tests passed · Device testing pending',heroFloatTop:'Curated collections',heroFloatTitle:'Winter Dreams',heroFloatBottom:'A world for every season',
@@ -37,16 +39,22 @@
     }
   };
   const seasonLabels = {
-    halloween:{de:['🎃 Halloween – Midnight Magic','Geheimnisvolle Burgen, Kürbislicht und eine Prise Gänsehaut.'],en:['🎃 Halloween – Midnight Magic','Mysterious castles, glowing pumpkins and a touch of spooky magic.']},
-    autumn:{de:['🍂 Autumn – Golden Hours','Goldene Wälder, warme Lichter und gemütliche Fantasiewelten.'],en:['🍂 Autumn – Golden Hours','Golden forests, warm lights and cozy fantasy worlds.']},
-    winter:{de:['❄️ Winter – Frozen Dreams','Verschneite Königreiche, eisblaue Nächte und das Leuchten der Polarlichter.'],en:['❄️ Winter – Frozen Dreams','Snowy kingdoms, icy blue nights and glowing northern lights.']},
-    spring:{de:['🌸 Spring – Blossom Tales','Blütenzauber, neue Farben und frische Landschaften.'],en:['🌸 Spring – Blossom Tales','Blooming magic, fresh colors and spring landscapes.']},
-    summer:{de:['☀️ Summer – Paradise Light','Palmen, türkisblaues Wasser und goldene Sonnenuntergänge.'],en:['☀️ Summer – Paradise Light','Palm trees, turquoise waters and golden sunsets.']},
-    christmas:{de:['🎄 Christmas – Starlit Wishes','Funkelnde Lichter, Winterdörfer und festliche Magie.'],en:['🎄 Christmas – Starlit Wishes','Twinkling lights, snowy villages and holiday magic.']}
+    halloween:{emoji:'🎃',title:'Halloween',de:'Geheimnisvolle Welten, magische Nächte und leuchtende Kürbisse.',en:'Mysterious worlds, enchanted nights and glowing pumpkins.',particle:'✦'},
+    autumn:{emoji:'🍂',title:'Autumn',de:'Goldene Wälder, fallende Blätter und die Wärme des Herbstes.',en:'Golden forests, falling leaves and the warmth of autumn.',particle:'🍂'},
+    winter:{emoji:'❄️',title:'Winter',de:'Eiskristalle, verschneite Schlösser und magische Nordlichter.',en:'Icy crystals, snow-covered castles and magical northern lights.',particle:'❄'},
+    spring:{emoji:'🌸',title:'Spring',de:'Kirschblüten, Pastellfarben und traumhafte Frühlingswelten.',en:'Cherry blossoms, pastel colors and dreamy spring worlds.',particle:'✿'},
+    summer:{emoji:'☀️',title:'Summer',de:'Türkisblaues Wasser, goldene Sonnenstrahlen und Sommermagie.',en:'Turquoise water, golden sunshine and summer magic.',particle:'✦'},
+    christmas:{emoji:'🎄',title:'Christmas',de:'Festliche Lichter, Schneeglanz und zauberhafte Weihnachtsnächte.',en:'Festive lights, sparkling snow and enchanting Christmas nights.',particle:'✧'}
   };
+  const seasonOrder = ['halloween','autumn','winter','spring','summer','christmas'];
+  const seasonCarouselOrder = ['autumn','winter','halloween','spring','summer','christmas'];
+  const seasonImage = (name,size='full') => `assets/castle-${name}-${size}.webp`;
+  const seasonAmbient = name => `assets/castle-${name}-ambient.webp`;
+  let lastBackdropSeason=null;
+  let backdropIndex=0;
   const qs = new URLSearchParams(location.search);
   let lang = qs.get('lang') === 'en' ? 'en' : 'de';
-  let selectedSeason = 'winter';
+  let selectedSeason = (() => {try{const p=new URLSearchParams(location.search).get('season');if(seasonOrder.includes(p))return p;const s=localStorage.getItem('artisfantasy-season-v4');return seasonOrder.includes(s)?s:'halloween';}catch(_){return 'halloween';}})();
   const $ = selector => document.querySelector(selector);
   function setLanguage(next, updateUrl=false){
     lang=next;
@@ -56,18 +64,94 @@
     document.querySelectorAll('[data-lang-panel]').forEach(el=>{el.hidden=el.dataset.langPanel!==lang;});
     document.querySelectorAll('[data-legal-link]').forEach(el=>{const page=el.getAttribute('href').split('?')[0];el.href=page+(lang==='en'?'?lang=en':'');});
     const toggle=$('[data-lang-toggle]');if(toggle){toggle.textContent=lang==='de'?'EN':'DE';toggle.setAttribute('aria-label',lang==='de'?'Switch to English':'Zu Deutsch wechseln');}
-    if(updateUrl){const u=new URL(location.href);if(lang==='en')u.searchParams.set('lang','en');else u.searchParams.delete('lang');history.replaceState(null,'',u.pathname+u.search+u.hash);}
-    if($('#season-detail-title'))updateSeason(selectedSeason);
+    if(updateUrl){try{const u=new URL(location.href);if(lang==='en')u.searchParams.set('lang','en');else u.searchParams.delete('lang');if(location.protocol==='http:'||location.protocol==='https:')history.replaceState(null,'',u.pathname+u.search+u.hash);}catch(_){/* local-file preview */}}
+    if($('#experience-season-title'))updateSeason(selectedSeason);
   }
-  function updateSeason(name){
+  function setBackdrop(name){
+    if(name===lastBackdropSeason)return;
+    const first=$('#season-bg-a'),second=$('#season-bg-b');
+    if(!first||!second)return;
+    if(lastBackdropSeason===null){first.style.backgroundImage=`url('${seasonAmbient(name)}')`;first.classList.add('visible');second.classList.remove('visible');}
+    else{
+      const current=backdropIndex===0?first:second;
+      const next=backdropIndex===0?second:first;
+      next.style.backgroundImage=`url('${seasonAmbient(name)}')`;
+      next.classList.add('visible');current.classList.remove('visible');
+      backdropIndex=1-backdropIndex;
+    }
+    lastBackdropSeason=name;
+  }
+  function renderSeasonParticles(name){
+    const container=$('#season-particles');if(!container)return;
+    container.replaceChildren();
+    // Stable positions avoid flashing/random jumps during language changes.
+    const code=seasonLabels[name].particle;
+    for(let i=0;i<17;i++){
+      const item=document.createElement('span');item.className='season-particle';item.textContent=code;
+      item.style.left=`${(i*47+11)%97}%`;item.style.top=`${(i*23+7)%82}%`;
+      item.style.animationDelay=`-${(i*1.7).toFixed(1)}s`;item.style.animationDuration=`${8+(i%5)*2}s`;
+      item.style.fontSize=`${9+(i%4)*5}px`;container.append(item);
+    }
+  }
+  function renderSeasonCarousel(name){
+    const selected=seasonCarouselOrder.indexOf(name);
+    document.querySelectorAll('.experience-icon').forEach(button=>{
+      const slot=Number(button.dataset.slot);
+      const season=seasonCarouselOrder[(selected+slot+seasonCarouselOrder.length)%seasonCarouselOrder.length];
+      const data=seasonLabels[season];
+      const img=button.querySelector('img');
+      const source=seasonImage(season,slot===0?'full':'small');
+      if(img.getAttribute('src')!==source)img.src=source;
+      img.alt=`${data.title} – Fantasy castle app icon`;
+      button.dataset.iconSeason=season;
+      button.classList.toggle('active',slot===0);
+      button.setAttribute('aria-label',`${data.emoji} ${data.title} ${lang==='de'?'auswählen':'select'}`);
+      button.setAttribute('aria-pressed',String(slot===0));
+    });
+  }
+  function updateSeason(name,userInitiated=false){
     if(!seasonLabels[name])return;
+    const changed=selectedSeason!==name||lastBackdropSeason===null;
     selectedSeason=name;
-    document.querySelectorAll('.season-card').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.season===name)));
-    if($('#season-detail-title'))$('#season-detail-title').textContent=seasonLabels[name][lang][0];
-    if($('#season-detail-description'))$('#season-detail-description').textContent=seasonLabels[name][lang][1];
-    if($('#season-detail-image')){let img=$('#season-detail-image');img.src=`assets/season-${name}-tiny.webp`;img.alt=name;}
+    document.body.dataset.activeSeason=name;
+    const data=seasonLabels[name];
+    document.querySelectorAll('[data-season]').forEach(btn=>{
+      const active=btn.dataset.season===name;
+      btn.setAttribute('aria-selected',String(active));
+      btn.setAttribute('aria-pressed',String(active));
+      btn.tabIndex=active?0:-1;
+    });
+    const label=$('#experience-season-title');if(label)label.textContent=`${data.emoji} ${data.title}`;
+    const description=$('#experience-season-description');if(description)description.textContent=data[lang];
+    renderSeasonCarousel(name);
+    if(changed){setBackdrop(name);renderSeasonParticles(name);}
+    const decorLeft=$('#season-decor-left'),decorRight=$('#season-decor-right');
+    if(decorLeft)decorLeft.textContent=data.emoji;
+    if(decorRight)decorRight.textContent= name==='halloween'?'🦇':name==='autumn'?'🍁':name==='winter'?'❄':name==='spring'?'🌸':name==='summer'?'☀':'✦';
+    document.querySelectorAll('[data-theme-logo]').forEach(img=>{const path=seasonImage(name,'small');if(img.getAttribute('src')!==path)img.src=path;});
+    document.querySelectorAll('[data-theme-large-icon]').forEach(img=>{img.src=seasonImage(name,'full');});
+    const favicon=document.querySelector('link[rel="icon"]');if(favicon)favicon.href=`assets/favicon-${name}.png`;
+    const themeColor=document.querySelector('meta[name="theme-color"]');
+    if(themeColor)themeColor.content=getComputedStyle(document.body).getPropertyValue('--theme-chrome').trim()||'#080914';
+    if(userInitiated){
+      try{localStorage.setItem('artisfantasy-season-v4',name);}catch(_){}
+      try{const u=new URL(location.href);u.searchParams.set('season',name);if(location.protocol==='http:'||location.protocol==='https:')history.replaceState(null,'',u.pathname+u.search+u.hash);}catch(_){/* local-file preview */}
+    }
   }
-  document.querySelectorAll('[data-season]').forEach(btn=>btn.addEventListener('click',()=>updateSeason(btn.dataset.season)));
+  document.querySelectorAll('[data-season]').forEach(btn=>btn.addEventListener('click',()=>updateSeason(btn.dataset.season,true)));
+  document.querySelectorAll('.experience-icon').forEach(btn=>btn.addEventListener('click',()=>updateSeason(btn.dataset.iconSeason,true)));
+  function cycleSeason(shift){const index=seasonOrder.indexOf(selectedSeason);updateSeason(seasonOrder[(index+shift+seasonOrder.length)%seasonOrder.length],true);}
+  $('#season-prev')?.addEventListener('click',()=>cycleSeason(-1));
+  $('#season-next')?.addEventListener('click',()=>cycleSeason(1));
+  $('#experience-switch')?.addEventListener('keydown',event=>{
+    const directions={ArrowRight:1,ArrowLeft:-1,Home:-99,End:99};
+    if(!(event.key in directions))return;
+    event.preventDefault();
+    if(event.key==='Home')updateSeason(seasonOrder[0],true);
+    else if(event.key==='End')updateSeason(seasonOrder[seasonOrder.length-1],true);
+    else cycleSeason(directions[event.key]);
+    document.querySelector(`[data-season="${selectedSeason}"]`)?.focus();
+  });
   document.querySelectorAll('[data-lang-toggle]').forEach(btn=>btn.addEventListener('click',()=>setLanguage(lang==='de'?'en':'de',true)));
   const menu=$('#site-menu'),menuToggle=$('#menu-toggle');
   if(menu&&menuToggle){menuToggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}));}

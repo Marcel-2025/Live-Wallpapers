@@ -1,3 +1,35 @@
+# Live Wallpapers – Premium Landingpage V4 (Seasonal Experience)
+
+Fertige, responsive und vollständig lokale HTML/CSS/JS-Website für GitHub Pages.
+
+## Neu in V4
+
+- **Interaktive Saison-Startseite ganz oben** – passend zum Konzept-Screenshot, kein statisches Mockup.
+- **6 Premium-Schloss-Icons** (Halloween, Autumn, Winter, Spring, Summer, Christmas) im originalen Vollflächen-Quadrat, WebP für schnelle Website-Vorschau und PNG 1024 × 1024 im Ordner `assets/app-icons/`.
+- **Saison-Switch** mit sechs Tabs, Pfeilen, 5-teiliger Icon-Karussell-Ansicht und Tastaturbedienung.
+- **Ganzer Seiten-Look ändert sich**: Header-Logo, große Icons, Seitenhintergründe, Farben, Ränder, Buttons, Premium-Karten, Licht und Partikeleffekte.
+- Auswahl bleibt lokal gespeichert (localStorage), optional als `?season=winter` verlinkbar; keine Tracking-Cookies.
+- DE/EN Umschaltung und die vorhandenen Inhalte bleiben erhalten.
+- V3.2 Social-Link `facebook.com/ArtIsFantasy/` bleibt unverändert.
+- Bisher korrigierte Screenshot-Galerie wird nicht verzerrt oder unnötig vergrößert.
+- Datenschutz, Impressum, Konto & Daten löschen enthalten und vor dem öffentlichen Launch zu prüfen.
+
+## Lokal testen
+
+`python -m http.server 8000` im Projektordner ausführen und `http://localhost:8000` öffnen.
+
+`index.html` funktioniert auch grundsätzlich ohne Build-Schritt. Verlinkungen zwischen den Seiten nutzen relative Pfade.
+
+## GitHub Pages
+
+Dateien **aus dem ZIP-Hauptverzeichnis** ins Repo hochladen; unter `Settings → Pages` den gewünschten Branch und Root auswählen. Die Website enthält keine externen Webfonts, Werbung oder Analytics.
+
+## Hinweis
+
+Die 790 Wallpaper, 27 Live-Wallpaper, 78 Kategorien und 27 Kollektionen entsprechen den vom Nutzer übermittelten Patch Notes 1.2.0. Die dargestellten Screenshots sind Design-Mockups; echter Gerätetest und reale Google-Play-Kaufabläufe sind laut Patch Notes noch offen. Das Impressum und die App-Datenschutzerklärung sind vor dem Launch mit tatsächlichen Angaben und SDKs zu vervollständigen.
+
+---
+
 # Live Wallpapers – Premium Landingpage V3 · App 1.2.0
 
 **ArtIsFantasy × Flondy** — eigenständige statische Website für GitHub Pages (HTML/CSS/JavaScript, keine Build-Tools).
@@ -53,7 +85,10 @@ Die fünf Screenshot-Mockups wurden verlustarm auf ihren tatsächlichen Bildinha
 
 ## V3.1 – ArtIsFantasy Markenauftritt (01.11.2026)
 - Neue zweisprachige **ArtIsFantasy**-Sektion mit KI-Kunst, Fantasy-Welten, Shorts, KI-Animationen und Ambiente-Videos.
-- Verifizierte, vom Betreiber mitgeteilte Kanäle: DeviantArt Galerie, Instagram @artisfantasy.da, TikTok @artisfantasy.da, Facebook ehhm.s.art.
+- Verifizierte, vom Betreiber mitgeteilte Kanäle: DeviantArt Galerie, Instagram @artisfantasy.da, TikTok @artisfantasy.da, Facebook ArtIsFantasy.
 - Erwähnung exklusiver Kunst und DeviantArt-VIP-Mitgliedschaften ohne Preis-/Leistungsversprechen.
 - Keine eingebetteten Drittanbieter-Widgets oder Tracking-Skripte; externe Netzwerke öffnen erst nach Klick.
 - Das Schloss bleibt App-Haupticon, Saisonicons bleiben unverändert. Der korrigierte Screenshot-Carousel bleibt unverändert.
+
+## V3.2 – Facebook-Link aktualisiert (01.11.2026)
+- Offizielle ArtIsFantasy-Facebook-Seite: https://www.facebook.com/ArtIsFantasy/ statt des früheren Links.
