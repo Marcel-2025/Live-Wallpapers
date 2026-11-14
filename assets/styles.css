@@ -261,3 +261,4 @@ body[data-active-season="classic"]{--bg:#080b24;--bg-2:#10143a;--purple:#bca3ff;
 .v5-icon-shell .icon-crossfade-old{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);border-radius:24%;object-fit:cover;pointer-events:none;z-index:4;opacity:1;transition:opacity .48s ease,filter .48s ease}
 .v5-icon-shell .icon-crossfade-old.fade-away{opacity:0;filter:blur(6px)}
 @media(prefers-reduced-motion:reduce){.v5-icon-shell .icon-crossfade-old{transition:none;display:none}}
+.social-mark.lt{background:linear-gradient(135deg,#43e660,#1d8f3a);color:#0b1a0f}.btn-icon{width:22px;height:22px;border-radius:6px;object-fit:cover}.experience-links{margin-top:18px}
